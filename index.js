@@ -67,7 +67,10 @@ app.get('/', async (req, res) => {
     },
   });
 
-  res.send(rowsValues);
+  return res.status(200).json({
+    status: true,
+    message: 'Sucess! Visualize the updated data at: https://docs.google.com/spreadsheets/d/1TCcqAcCK4Gk2TAZH01D9n9UP2owAcBXgVB6P89kxL9U/edit#gid=0'
+  });
 });
 
 app.listen(5000, () => {
